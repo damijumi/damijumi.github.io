@@ -46,7 +46,7 @@
                     keyframes: {
                         float: {
                             '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-10px)' },
+                            '50%': { transform: 'translateY(-8px)' },
                         }
                     }
                 }
@@ -87,8 +87,8 @@
         }
         .glass-card:hover {
             border-color: rgba(59, 130, 246, 0.4);
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px -10px rgba(59, 130, 246, 0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px -10px rgba(59, 130, 246, 0.15);
         }
         .dark .glass-card {
             background: rgba(13, 21, 39, 0.72);
@@ -97,13 +97,13 @@
         }
         .dark .glass-card:hover {
             border-color: rgba(56, 189, 248, 0.35);
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px -10px rgba(6, 182, 212, 0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px -10px rgba(6, 182, 212, 0.15);
         }
 
         /* Grid Background pattern */
         .bg-grid-pattern {
-            background-size: 40px 40px;
+            background-size: 32px 32px;
             background-image: 
                 linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
                 linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
@@ -143,26 +143,26 @@
 
     <!-- Background Ambient Lights / Aerospace Aura -->
     <div class="fixed inset-0 pointer-events-none bg-grid-pattern z-0"></div>
-    <div class="fixed -top-40 -left-40 w-96 h-96 bg-blue-500/10 dark:bg-blue-600/15 rounded-full blur-[128px] pointer-events-none"></div>
-    <div class="fixed top-1/3 -right-40 w-[30rem] h-[30rem] bg-cyan-400/10 dark:bg-cyan-500/10 rounded-full blur-[140px] pointer-events-none"></div>
-    <div class="fixed -bottom-40 left-1/3 w-[35rem] h-[35rem] bg-indigo-500/10 dark:bg-indigo-600/10 rounded-full blur-[150px] pointer-events-none"></div>
+    <div class="fixed -top-40 -left-40 w-80 h-80 bg-blue-500/10 dark:bg-blue-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="fixed top-1/3 -right-40 w-96 h-96 bg-cyan-400/10 dark:bg-cyan-500/10 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="fixed -bottom-40 left-1/3 w-96 h-96 bg-indigo-500/10 dark:bg-indigo-600/10 rounded-full blur-[140px] pointer-events-none"></div>
 
     <!-- Navigation Header -->
     <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/85 dark:bg-space-950/75 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800/60" id="main-nav">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
+            <div class="flex items-center justify-between h-16 sm:h-20">
                 
                 <!-- Logo & Brand -->
-                <a href="#" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center font-mono font-bold text-white shadow-lg shadow-cyan-500/25 group-hover:scale-105 transition-transform">
+                <a href="#" class="flex items-center gap-2.5 sm:gap-3 group">
+                    <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center font-mono font-bold text-white shadow-lg shadow-cyan-500/25 group-hover:scale-105 transition-transform">
                         <span>SD</span>
                     </div>
                     <div>
-                        <div class="font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+                        <div class="font-bold tracking-tight text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors flex items-center gap-1.5">
                             Sergio Damián
                             <span class="w-2 h-2 rounded-full bg-cyan-500 dark:bg-cyan-400 animate-pulse"></span>
                         </div>
-                        <span class="text-xs font-mono text-blue-600 dark:text-cyan-400/80 tracking-wider">DEV.AEROSPACE</span>
+                        <span class="text-[10px] sm:text-xs font-mono text-blue-600 dark:text-cyan-400/80 tracking-wider">DEV.AEROSPACE</span>
                     </div>
                 </a>
 
@@ -181,29 +181,29 @@
                 <!-- Action Controls (Theme Toggle + CTA) -->
                 <div class="hidden sm:flex items-center gap-3">
                     <!-- Theme Switcher -->
-                    <button id="theme-toggle" type="button" class="w-10 h-10 rounded-xl glass-card flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 transition-colors" title="Cambiar tema">
+                    <button id="theme-toggle" type="button" class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl glass-card flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 transition-colors" title="Cambiar tema">
                         <i id="theme-icon" class="fas fa-moon text-sm"></i>
                     </button>
 
                     <!-- Quick Copy Email Button -->
-                    <button onclick="copyEmail()" class="px-3.5 py-2 rounded-xl glass-card text-xs font-mono text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 flex items-center gap-2 transition-all">
+                    <button onclick="copyEmail()" class="px-3 py-2 rounded-xl glass-card text-xs font-mono text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 flex items-center gap-2 transition-all">
                         <i class="far fa-copy text-blue-600 dark:text-cyan-400"></i>
                         <span>damijumi@gmail.com</span>
                     </button>
 
                     <!-- Contact CTA -->
-                    <a href="#contact" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-medium text-sm shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/35 transition-all duration-300 hover:scale-[1.02]">
+                    <a href="#contact" class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-medium text-xs sm:text-sm shadow-md shadow-cyan-500/20 hover:shadow-cyan-500/35 transition-all duration-300 hover:scale-[1.02]">
                         Hablemos
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="flex items-center gap-2 lg:hidden">
-                    <button id="mobile-theme-toggle" type="button" class="w-10 h-10 rounded-xl glass-card flex items-center justify-center text-slate-700 dark:text-slate-300">
-                        <i id="mobile-theme-icon" class="fas fa-moon text-sm"></i>
+                    <button id="mobile-theme-toggle" type="button" class="w-9 h-9 rounded-xl glass-card flex items-center justify-center text-slate-700 dark:text-slate-300">
+                        <i id="mobile-theme-icon" class="fas fa-moon text-xs"></i>
                     </button>
-                    <button id="mobile-menu-btn" class="w-10 h-10 rounded-xl glass-card flex items-center justify-center text-slate-700 dark:text-slate-300 focus:outline-none">
-                        <i class="fas fa-bars text-base"></i>
+                    <button id="mobile-menu-btn" class="w-9 h-9 rounded-xl glass-card flex items-center justify-center text-slate-700 dark:text-slate-300 focus:outline-none">
+                        <i class="fas fa-bars text-sm"></i>
                     </button>
                 </div>
 
@@ -211,13 +211,13 @@
         </div>
 
         <!-- Mobile Dropdown Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800/80 bg-white/95 dark:bg-space-900/95 backdrop-blur-xl px-4 pt-4 pb-6 space-y-3">
-            <a href="#about" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 font-medium">Sobre mí</a>
-            <a href="#experience" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 font-medium">Experiencia (Airbus Crisa)</a>
-            <a href="#skills" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 font-medium">Stack Técnico</a>
-            <a href="#projects" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 font-medium">Proyectos</a>
-            <a href="#education" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 font-medium">Educación</a>
-            <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex flex-col gap-2">
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800/80 bg-white/95 dark:bg-space-900/95 backdrop-blur-xl px-4 pt-3 pb-5 space-y-2">
+            <a href="#about" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 font-medium text-sm">Sobre mí</a>
+            <a href="#experience" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 font-medium text-sm">Experiencia (Airbus Crisa)</a>
+            <a href="#skills" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 font-medium text-sm">Stack Técnico</a>
+            <a href="#projects" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 font-medium text-sm">Proyectos</a>
+            <a href="#education" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 font-medium text-sm">Educación</a>
+            <div class="pt-2.5 border-t border-slate-200 dark:border-slate-800 flex flex-col gap-2">
                 <button onclick="copyEmail()" class="w-full py-2.5 rounded-lg glass-card text-xs font-mono flex items-center justify-center gap-2 text-slate-700 dark:text-slate-300">
                     <i class="far fa-copy text-blue-600 dark:text-cyan-400"></i>
                     <span>Copiar damijumi@gmail.com</span>
@@ -227,144 +227,136 @@
         </div>
     </nav>
 
-    <!-- Main Content Container -->
-    <main class="relative z-10 pt-28">
+    <!-- Main Content Container with Compact Top Spacing -->
+    <main class="relative z-10 pt-16 sm:pt-20">
 
         <!-- ============================================== -->
         <!-- HERO SECTION: High-Tech Aerospace Showcase     -->
         <!-- ============================================== -->
-        <section class="min-h-[85vh] flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
+        <section class="py-4 sm:py-8 lg:py-12 px-4 sm:px-6 lg:px-8">
             <div class="max-w-7xl mx-auto w-full">
                 
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
                     
-                    <!-- Left Column: Bio & Title -->
-                    <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <!-- Intro & Bio Block -->
+                    <div class="lg:col-span-7 text-center lg:text-left space-y-3 sm:space-y-4">
                         
                         <!-- Status Pill Badge -->
-                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-card text-xs font-mono text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-cyan-500/30">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-card text-xs font-mono text-blue-700 dark:text-cyan-400 border border-blue-200 dark:border-cyan-500/30">
                             <span class="relative flex h-2 w-2">
                                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                                 <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
                             </span>
-                            <span>Software Developer @ Airbus Crisa • Aerospace IT</span>
+                            <span class="truncate">Software Developer @ Airbus Crisa • Aerospace IT</span>
                         </div>
 
                         <!-- Main Heading -->
-                        <div class="space-y-2">
-                            <h2 class="text-sm sm:text-base font-mono uppercase tracking-widest text-slate-500 dark:text-slate-400">
+                        <div class="space-y-1">
+                            <h2 class="text-xs sm:text-sm font-mono uppercase tracking-widest text-slate-500 dark:text-slate-400">
                                 Hola, bienvenido/a a mi portfolio. Soy
                             </h2>
-                            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.1]">
+                            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.12]">
                                 Sergio Damián <br>
                                 <span class="text-glow-gradient">García Martín</span>
                             </h1>
                         </div>
 
                         <!-- Dynamic Typewriter Role -->
-                        <div class="text-xl sm:text-2xl font-mono font-medium text-blue-600 dark:text-cyan-400 flex items-center justify-center lg:justify-start gap-1 h-9">
+                        <div class="text-lg sm:text-xl font-mono font-medium text-blue-600 dark:text-cyan-400 flex items-center justify-center lg:justify-start gap-1 h-7 sm:h-8">
                             <span class="text-slate-400 dark:text-slate-500">&gt;</span>
                             <span id="typewriter"></span>
                             <span class="cursor-blink font-bold">|</span>
                         </div>
 
                         <!-- Brief Description -->
-                        <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
                             Especialista en desarrollo de soluciones de software robustas, eficientes y orientadas a entornos de alta criticidad. Con más de 7 años en el sector aeroespacial, enfocado en el ecosistema <span class="text-slate-900 dark:text-white font-semibold">.NET (C#, Blazor)</span>, administración de bases de datos relacionales y arquitectura full-stack.
                         </p>
 
                         <!-- Call To Actions -->
-                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-                            <a href="#contact" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 via-cyan-500 to-indigo-600 hover:from-blue-500 hover:to-cyan-400 text-white font-semibold text-sm shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2">
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 sm:gap-3 pt-1">
+                            <a href="#contact" class="px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl bg-gradient-to-r from-blue-600 via-cyan-500 to-indigo-600 hover:from-blue-500 hover:to-cyan-400 text-white font-semibold text-xs sm:text-sm shadow-md shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2">
                                 <i class="fas fa-paper-plane text-xs"></i>
                                 <span>Iniciar Contacto</span>
                             </a>
 
-                            <button onclick="copyEmail()" class="px-6 py-3.5 rounded-xl glass-card text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-cyan-400 hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2">
+                            <button onclick="copyEmail()" class="px-4 py-2.5 sm:px-5 sm:py-3 rounded-xl glass-card text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-cyan-400 hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2">
                                 <i class="far fa-copy text-blue-600 dark:text-cyan-400"></i>
                                 <span>Copiar Correo</span>
                             </button>
 
-                            <a href="https://github.com/damijumi" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-xl glass-card flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 hover:scale-105 transition-all" title="Ver GitHub de Sergio">
-                                <i class="fab fa-github text-xl"></i>
+                            <a href="https://github.com/damijumi" target="_blank" rel="noopener noreferrer" class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl glass-card flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 hover:scale-105 transition-all" title="Ver GitHub de Sergio">
+                                <i class="fab fa-github text-lg"></i>
                             </a>
-                        </div>
-
-                        <!-- Key Metrics Grid -->
-                        <div class="pt-6 border-t border-slate-200 dark:border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-4">
-                            <div class="p-3 rounded-xl glass-card text-center lg:text-left">
-                                <div class="text-2xl sm:text-3xl font-bold font-mono text-blue-600 dark:text-cyan-400">+7 Años</div>
-                                <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Exp. Aeroespacial (Airbus)</div>
-                            </div>
-                            <div class="p-3 rounded-xl glass-card text-center lg:text-left">
-                                <div class="text-2xl sm:text-3xl font-bold font-mono text-blue-600 dark:text-blue-400">.NET & C#</div>
-                                <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Ecosistema Core</div>
-                            </div>
-                            <div class="p-3 rounded-xl glass-card text-center lg:text-left">
-                                <div class="text-2xl sm:text-3xl font-bold font-mono text-purple-600 dark:text-purple-400">+10 Años</div>
-                                <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Creación Audiovisual</div>
-                            </div>
-                            <div class="p-3 rounded-xl glass-card text-center lg:text-left">
-                                <div class="text-2xl sm:text-3xl font-bold font-mono text-emerald-600 dark:text-emerald-400">100%</div>
-                                <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Compromiso & Proactividad</div>
-                            </div>
                         </div>
 
                     </div>
 
-                    <!-- Right Column: Interactive Profile & Orbiting Techs -->
-                    <div class="lg:col-span-5 flex justify-center items-center relative">
-                        
-                        <div class="relative w-72 h-72 sm:w-88 sm:h-88 lg:w-96 lg:h-96">
+                    <!-- Profile Image (Shows BEFORE metrics on mobile!) -->
+                    <div class="lg:col-span-5 flex justify-center items-center py-2 sm:py-4 lg:py-0">
+                        <div class="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-84 lg:h-84">
                             
                             <!-- Outer Orbit Rings -->
                             <div class="absolute inset-0 rounded-full border border-dashed border-blue-400/30 dark:border-cyan-500/20 animate-spin-slow"></div>
-                            <div class="absolute -inset-4 rounded-full border border-slate-300/40 dark:border-slate-700/40 pointer-events-none"></div>
+                            <div class="absolute -inset-3 sm:-inset-4 rounded-full border border-slate-300/40 dark:border-slate-700/40 pointer-events-none"></div>
 
                             <!-- Central Avatar Glow -->
-                            <div class="absolute inset-4 bg-gradient-to-tr from-cyan-500/25 via-blue-600/25 to-purple-600/25 rounded-full blur-2xl opacity-60 animate-pulse-slow"></div>
+                            <div class="absolute inset-3 sm:inset-4 bg-gradient-to-tr from-cyan-500/25 via-blue-600/25 to-purple-600/25 rounded-full blur-2xl opacity-60 animate-pulse-slow"></div>
 
                             <!-- Avatar Frame -->
-                            <div class="absolute inset-4 rounded-full p-1.5 bg-gradient-to-tr from-cyan-400 via-blue-500 to-indigo-600 shadow-2xl overflow-hidden">
+                            <div class="absolute inset-3 sm:inset-4 rounded-full p-1.5 bg-gradient-to-tr from-cyan-400 via-blue-500 to-indigo-600 shadow-2xl overflow-hidden">
                                 <div class="w-full h-full rounded-full overflow-hidden bg-white dark:bg-space-900 relative">
                                     <img src="https://lh3.googleusercontent.com/a/ACg8ocIa92GNgJm_8qP_0nvT1sGu_9H0ackyPY5io5CZ8ZIYiQQcg3bn=s288-c-no" 
                                          alt="Sergio Damián García Martín" 
                                          class="w-full h-full object-cover transition-all duration-500 hover:scale-105">
-                                    <!-- Subtle overlay -->
                                     <div class="absolute inset-0 bg-blue-500/10 pointer-events-none"></div>
                                 </div>
                             </div>
 
-                            <!-- Floating Tech Badges with 3D/Hover Effect -->
-                            <div class="absolute -top-3 -right-2 glass-card px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-xl animate-float">
-                                <div class="w-8 h-8 rounded-lg bg-blue-600/15 text-blue-600 dark:text-blue-400 flex items-center justify-center text-lg">
+                            <!-- Floating Badges -->
+                            <div class="absolute -top-1.5 right-0 sm:-top-3 sm:-right-2 glass-card px-2.5 py-1 sm:px-4 sm:py-2 rounded-xl sm:rounded-2xl flex items-center gap-2 sm:gap-3 shadow-md animate-float">
+                                <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-blue-600/15 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xs sm:text-base">
                                     <i class="fab fa-microsoft"></i>
                                 </div>
                                 <div>
-                                    <div class="text-xs font-mono font-bold text-slate-800 dark:text-white">.NET Core & C#</div>
-                                    <div class="text-[10px] text-blue-600 dark:text-cyan-400">Backend & APIs</div>
+                                    <div class="text-[10px] sm:text-xs font-mono font-bold text-slate-800 dark:text-white">.NET Core & C#</div>
+                                    <div class="text-[9px] sm:text-[10px] text-blue-600 dark:text-cyan-400">Backend & APIs</div>
                                 </div>
                             </div>
 
-                            <div class="absolute -bottom-4 -left-3 glass-card px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-xl animate-float" style="animation-delay: 2s;">
-                                <div class="w-8 h-8 rounded-lg bg-purple-600/15 text-purple-600 dark:text-purple-400 flex items-center justify-center text-lg">
+                            <div class="absolute -bottom-1.5 left-0 sm:-bottom-3 sm:-left-2 glass-card px-2.5 py-1 sm:px-4 sm:py-2 rounded-xl sm:rounded-2xl flex items-center gap-2 sm:gap-3 shadow-md animate-float" style="animation-delay: 2s;">
+                                <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-purple-600/15 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xs sm:text-base">
                                     <i class="fas fa-layer-group"></i>
                                 </div>
                                 <div>
-                                    <div class="text-xs font-mono font-bold text-slate-800 dark:text-white">Blazor Web</div>
-                                    <div class="text-[10px] text-purple-600 dark:text-purple-400">SPA Architecture</div>
+                                    <div class="text-[10px] sm:text-xs font-mono font-bold text-slate-800 dark:text-white">Blazor Web</div>
+                                    <div class="text-[9px] sm:text-[10px] text-purple-600 dark:text-purple-400">SPA Architecture</div>
                                 </div>
-                            </div>
-
-                            <div class="absolute top-1/2 -right-8 glass-card px-3.5 py-2 rounded-2xl hidden sm:flex items-center gap-2.5 shadow-xl animate-float" style="animation-delay: 3.5s;">
-                                <div class="w-7 h-7 rounded-lg bg-amber-500/15 text-amber-600 dark:text-amber-400 flex items-center justify-center text-sm">
-                                    <i class="fas fa-database"></i>
-                                </div>
-                                <div class="text-xs font-mono font-bold text-slate-800 dark:text-white">Oracle & SQL</div>
                             </div>
 
                         </div>
+                    </div>
 
+                    <!-- Key Metrics Grid (Placed AFTER Avatar!) -->
+                    <div class="lg:col-span-12 pt-3 sm:pt-5 border-t border-slate-200 dark:border-slate-800/80">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4">
+                            <div class="p-3 rounded-xl glass-card text-center">
+                                <div class="text-xl sm:text-2xl lg:text-3xl font-bold font-mono text-blue-600 dark:text-cyan-400">+7 Años</div>
+                                <div class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-0.5">Exp. Aeroespacial (Airbus)</div>
+                            </div>
+                            <div class="p-3 rounded-xl glass-card text-center">
+                                <div class="text-xl sm:text-2xl lg:text-3xl font-bold font-mono text-blue-600 dark:text-blue-400">.NET & C#</div>
+                                <div class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-0.5">Ecosistema Core</div>
+                            </div>
+                            <div class="p-3 rounded-xl glass-card text-center">
+                                <div class="text-xl sm:text-2xl lg:text-3xl font-bold font-mono text-purple-600 dark:text-purple-400">+10 Años</div>
+                                <div class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-0.5">Creación Audiovisual</div>
+                            </div>
+                            <div class="p-3 rounded-xl glass-card text-center">
+                                <div class="text-xl sm:text-2xl lg:text-3xl font-bold font-mono text-emerald-600 dark:text-emerald-400">100%</div>
+                                <div class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-0.5">Compromiso & Proactividad</div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -375,62 +367,62 @@
         <!-- ============================================== -->
         <!-- ABOUT / PILARES SECTION                        -->
         <!-- ============================================== -->
-        <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800/80">
+        <section id="about" class="py-10 sm:py-14 lg:py-18 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800/80">
             <div class="max-w-7xl mx-auto">
                 
-                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-2">
                     <span class="text-xs font-mono tracking-widest text-blue-600 dark:text-cyan-400 uppercase">Perfil Profesional</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
                         Precisión Técnica, Coordinación & Visión Full-Stack
                     </h2>
                     <div class="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto rounded-full"></div>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed pt-2">
+                    <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm md:text-base leading-relaxed pt-1">
                         Mi experiencia combina el rigor de la industria aeroespacial con la agilidad del desarrollo web moderno y habilidades de comunicación forjadas ante miles de usuarios en directo.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                     
                     <!-- Card 1: Rigor Aeroespacial -->
-                    <div class="glass-card p-6 rounded-2xl relative overflow-hidden group">
-                        <div class="w-12 h-12 rounded-xl bg-blue-600/15 text-blue-600 dark:text-cyan-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                    <div class="glass-card p-5 sm:p-6 rounded-2xl relative overflow-hidden group">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-600/15 text-blue-600 dark:text-cyan-400 flex items-center justify-center text-lg sm:text-xl mb-3 group-hover:scale-110 transition-transform">
                             <i class="fas fa-satellite"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Entornos Críticos</h3>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-1.5">Entornos Críticos</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed">
                             Más de 7 años en Airbus Crisa gestionando aplicaciones de IT, control de calidad de software y bases de datos con los más altos estándares de fiabilidad y seguridad.
                         </p>
                     </div>
 
                     <!-- Card 2: Full-Stack Versatility -->
-                    <div class="glass-card p-6 rounded-2xl relative overflow-hidden group">
-                        <div class="w-12 h-12 rounded-xl bg-purple-600/15 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                    <div class="glass-card p-5 sm:p-6 rounded-2xl relative overflow-hidden group">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-purple-600/15 text-purple-600 dark:text-purple-400 flex items-center justify-center text-lg sm:text-xl mb-3 group-hover:scale-110 transition-transform">
                             <i class="fas fa-cubes"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Ecosistema Completo</h3>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-1.5">Ecosistema Completo</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed">
                             Dominio integral desde backend estructurado (.NET C#, Java, PHP/Laravel) hasta interfaces interactivas y dinámicas (Blazor, JavaScript ES6+, Tailwind, Bootstrap).
                         </p>
                     </div>
 
                     <!-- Card 3: Comunicación & Streaming -->
-                    <div class="glass-card p-6 rounded-2xl relative overflow-hidden group">
-                        <div class="w-12 h-12 rounded-xl bg-pink-600/15 text-pink-600 dark:text-pink-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                    <div class="glass-card p-5 sm:p-6 rounded-2xl relative overflow-hidden group">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-pink-600/15 text-pink-600 dark:text-pink-400 flex items-center justify-center text-lg sm:text-xl mb-3 group-hover:scale-110 transition-transform">
                             <i class="fas fa-broadcast-tower"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Comunicación & Soft Skills</h3>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-1.5">Comunicación & Soft Skills</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed">
                             Una década de experiencia como Streamer Partner en Twitch, YouTube y Facebook Gaming. Gran facilidad para conectar, explicar conceptos complejos y liderar equipos.
                         </p>
                     </div>
 
                     <!-- Card 4: Gestión de Datos & Optimización -->
-                    <div class="glass-card p-6 rounded-2xl relative overflow-hidden group">
-                        <div class="w-12 h-12 rounded-xl bg-emerald-600/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                    <div class="glass-card p-5 sm:p-6 rounded-2xl relative overflow-hidden group">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-emerald-600/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-lg sm:text-xl mb-3 group-hover:scale-110 transition-transform">
                             <i class="fas fa-database"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Bases de Datos Robustas</h3>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-1.5">Bases de Datos Robustas</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed">
                             Diseño, administración y optimización de consultas complejas en Oracle PL/SQL, SQL Server y MySQL, garantizando integridad referencial y alto rendimiento.
                         </p>
                     </div>
@@ -438,28 +430,28 @@
                 </div>
 
                 <!-- Languages & Info Row -->
-                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="glass-card p-6 rounded-2xl flex flex-col sm:flex-row items-center gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-cyan-500/15 text-blue-600 dark:text-cyan-400 flex items-center justify-center text-2xl shrink-0">
+                <div class="mt-4 sm:mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="glass-card p-4 sm:p-5 rounded-2xl flex items-center gap-3.5">
+                        <div class="w-10 h-10 rounded-xl bg-cyan-500/15 text-blue-600 dark:text-cyan-400 flex items-center justify-center text-xl shrink-0">
                             <i class="fas fa-language"></i>
                         </div>
                         <div>
-                            <h4 class="font-bold text-slate-900 dark:text-white mb-1">Competencia Lingüística</h4>
-                            <p class="text-sm text-slate-600 dark:text-slate-400">
+                            <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Competencia Lingüística</h4>
+                            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
                                 <strong class="text-slate-900 dark:text-white">Español:</strong> Nativo &bull; 
-                                <strong class="text-slate-900 dark:text-white">Inglés:</strong> Nivel técnico y conversacional para especificaciones internacionales, documentación y trabajo colaborativo.
+                                <strong class="text-slate-900 dark:text-white">Inglés:</strong> Técnico y conversacional fluido.
                             </p>
                         </div>
                     </div>
 
-                    <div class="glass-card p-6 rounded-2xl flex flex-col sm:flex-row items-center gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-amber-500/15 text-amber-600 dark:text-amber-400 flex items-center justify-center text-2xl shrink-0">
+                    <div class="glass-card p-4 sm:p-5 rounded-2xl flex items-center gap-3.5">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/15 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl shrink-0">
                             <i class="fas fa-map-pin"></i>
                         </div>
                         <div>
-                            <h4 class="font-bold text-slate-900 dark:text-white mb-1">Ubicación & Modalidad</h4>
-                            <p class="text-sm text-slate-600 dark:text-slate-400">
-                                Residente en <strong class="text-slate-900 dark:text-white">San Sebastián de los Reyes (Madrid, España)</strong>. Disponibilidad presencial en Comunidad de Madrid o formato híbrido / remoto.
+                            <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Ubicación & Modalidad</h4>
+                            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+                                <strong class="text-slate-900 dark:text-white">San Sebastián de los Reyes (Madrid)</strong> &bull; Presencial o Híbrido/Remoto.
                             </p>
                         </div>
                     </div>
@@ -471,169 +463,152 @@
         <!-- ============================================== -->
         <!-- EXPERIENCE SECTION: Interactive Timeline       -->
         <!-- ============================================== -->
-        <section id="experience" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800/80">
+        <section id="experience" class="py-10 sm:py-14 lg:py-18 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800/80">
             <div class="max-w-5xl mx-auto">
                 
-                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-2">
                     <span class="text-xs font-mono tracking-widest text-blue-600 dark:text-cyan-400 uppercase">Trayectoria Profesional</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
                         Experiencia en Ingeniería de Software
                     </h2>
                     <div class="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto rounded-full"></div>
                 </div>
 
-                <div class="relative pl-6 sm:pl-10 space-y-12 before:content-[''] before:absolute before:left-3 sm:before:left-5 before:top-3 before:bottom-3 before:w-0.5 before:bg-gradient-to-b before:from-cyan-500 before:via-blue-600 before:to-purple-600">
+                <div class="relative pl-5 sm:pl-8 space-y-6 sm:space-y-8 before:content-[''] before:absolute before:left-2.5 sm:before:left-4 before:top-2 before:bottom-2 before:w-0.5 before:bg-gradient-to-b before:from-cyan-500 before:via-blue-600 before:to-purple-600">
                     
                     <!-- ITEM 1: Airbus Crisa (FEATURED HERO CARD) -->
                     <div class="relative group">
                         <!-- Timeline Pin -->
-                        <div class="absolute -left-6 sm:-left-10 top-1.5 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-white dark:bg-space-950 border-2 border-cyan-500 dark:border-cyan-400 flex items-center justify-center shadow-lg shadow-cyan-500/30">
-                            <div class="w-2.5 h-2.5 rounded-full bg-cyan-500 dark:bg-cyan-400 animate-ping"></div>
+                        <div class="absolute -left-5 sm:-left-8 top-1.5 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white dark:bg-space-950 border-2 border-cyan-500 dark:border-cyan-400 flex items-center justify-center shadow-md shadow-cyan-500/30">
+                            <div class="w-2 h-2 rounded-full bg-cyan-500 dark:bg-cyan-400 animate-ping"></div>
                         </div>
 
                         <!-- Card Content -->
-                        <div class="glass-card p-6 sm:p-8 rounded-2xl border-blue-300 dark:border-cyan-500/40 shadow-xl shadow-cyan-950/10 dark:shadow-cyan-950/30 relative overflow-hidden">
+                        <div class="glass-card p-5 sm:p-7 rounded-2xl border-blue-300 dark:border-cyan-500/40 shadow-lg relative overflow-hidden">
                             <!-- Aerospace Accent Badge -->
-                            <div class="absolute top-0 right-0 bg-gradient-to-l from-blue-100 dark:from-cyan-500/20 to-transparent px-4 py-1.5 rounded-bl-xl border-b border-l border-blue-200 dark:border-cyan-500/30 text-[11px] font-mono font-semibold text-blue-700 dark:text-cyan-300 flex items-center gap-1.5">
+                            <div class="absolute top-0 right-0 bg-gradient-to-l from-blue-100 dark:from-cyan-500/20 to-transparent px-3 py-1 rounded-bl-xl border-b border-l border-blue-200 dark:border-cyan-500/30 text-[10px] sm:text-[11px] font-mono font-semibold text-blue-700 dark:text-cyan-300 flex items-center gap-1.5">
                                 <i class="fas fa-rocket text-blue-600 dark:text-cyan-400"></i>
-                                <span>SECTOR AEROESPACIAL</span>
+                                <span>AEROESPACIAL</span>
                             </div>
 
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
                                 <div>
-                                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Desarrollador de Software</h3>
-                                    <div class="text-base font-semibold text-blue-600 dark:text-cyan-400 flex items-center gap-2 mt-0.5">
+                                    <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Desarrollador de Software</h3>
+                                    <div class="text-sm font-semibold text-blue-600 dark:text-cyan-400 flex items-center gap-1.5 mt-0.5">
                                         <i class="fas fa-building text-xs"></i>
                                         <span>Airbus Crisa (Tres Cantos, Madrid)</span>
                                     </div>
                                 </div>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-blue-100 text-blue-700 dark:bg-cyan-500/10 dark:text-cyan-400 border border-blue-200 dark:border-cyan-500/25 self-start sm:self-auto">
-                                    <i class="far fa-calendar-alt"></i> Mar 2019 - Actualidad (+7 años)
+                                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-mono font-semibold bg-blue-100 text-blue-700 dark:bg-cyan-500/10 dark:text-cyan-400 border border-blue-200 dark:border-cyan-500/25 self-start sm:self-auto mt-1 sm:mt-0">
+                                    <i class="far fa-calendar-alt text-[10px]"></i> Mar 2019 - Actualidad (+7 años)
                                 </span>
                             </div>
 
-                            <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+                            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed mb-3">
                                 Ingeniero de software en el departamento de IT en el sector aeroespacial. Responsable del ciclo de vida del software, desarrollo de herramientas críticas y administración avanzada de datos.
                             </p>
 
-                            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400 mb-5">
-                                <li class="flex items-start gap-2.5">
-                                    <i class="fas fa-check-circle text-blue-600 dark:text-cyan-400 mt-1 shrink-0 text-xs"></i>
-                                    <span>Desarrollo de aplicaciones corporativas de alto rendimiento utilizando el ecosistema <strong>Visual Studio, .NET Core y C#</strong>.</span>
+                            <ul class="space-y-1.5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 mb-4">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-blue-600 dark:text-cyan-400 mt-0.5 shrink-0 text-xs"></i>
+                                    <span>Desarrollo de aplicaciones corporativas utilizando el ecosistema <strong>Visual Studio, .NET Core y C#</strong>.</span>
                                 </li>
-                                <li class="flex items-start gap-2.5">
-                                    <i class="fas fa-check-circle text-blue-600 dark:text-cyan-400 mt-1 shrink-0 text-xs"></i>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-blue-600 dark:text-cyan-400 mt-0.5 shrink-0 text-xs"></i>
                                     <span>Diseño, mantenimiento y optimización de bases de datos relacionales empresariales (<strong>Oracle PL/SQL, SQL Server</strong>).</span>
                                 </li>
-                                <li class="flex items-start gap-2.5">
-                                    <i class="fas fa-check-circle text-blue-600 dark:text-cyan-400 mt-1 shrink-0 text-xs"></i>
-                                    <span>Automatización de flujos de trabajo internos, integración de sistemas y aseguramiento de la integridad de datos bajo normativas de estricta calidad.</span>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-blue-600 dark:text-cyan-400 mt-0.5 shrink-0 text-xs"></i>
+                                    <span>Automatización de flujos de trabajo e integración de sistemas bajo normativas de estricta calidad.</span>
                                 </li>
                             </ul>
 
-                            <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-200 dark:border-slate-800">
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-blue-50 text-blue-700 dark:bg-slate-800 dark:text-cyan-300">.NET Core</span>
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-blue-50 text-blue-700 dark:bg-slate-800 dark:text-cyan-300">C#</span>
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-blue-50 text-blue-700 dark:bg-slate-800 dark:text-cyan-300">Oracle PL/SQL</span>
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-blue-50 text-blue-700 dark:bg-slate-800 dark:text-cyan-300">SQL Server</span>
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-blue-50 text-blue-700 dark:bg-slate-800 dark:text-cyan-300">Visual Studio</span>
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-blue-50 text-blue-700 dark:bg-slate-800 dark:text-cyan-300">IT Enterprise Systems</span>
+                            <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-200 dark:border-slate-800">
+                                <span class="px-2 py-0.5 rounded-md text-[11px] font-mono bg-blue-50 text-blue-700 dark:bg-slate-800 dark:text-cyan-300">.NET Core</span>
+                                <span class="px-2 py-0.5 rounded-md text-[11px] font-mono bg-blue-50 text-blue-700 dark:bg-slate-800 dark:text-cyan-300">C#</span>
+                                <span class="px-2 py-0.5 rounded-md text-[11px] font-mono bg-blue-50 text-blue-700 dark:bg-slate-800 dark:text-cyan-300">Oracle PL/SQL</span>
+                                <span class="px-2 py-0.5 rounded-md text-[11px] font-mono bg-blue-50 text-blue-700 dark:bg-slate-800 dark:text-cyan-300">SQL Server</span>
+                                <span class="px-2 py-0.5 rounded-md text-[11px] font-mono bg-blue-50 text-blue-700 dark:bg-slate-800 dark:text-cyan-300">Visual Studio</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- ITEM 2: Flamago Ibericos -->
                     <div class="relative group">
-                        <div class="absolute -left-6 sm:-left-10 top-1.5 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-white dark:bg-space-950 border-2 border-slate-400 dark:border-slate-600 flex items-center justify-center">
-                            <div class="w-2 h-2 rounded-full bg-slate-400"></div>
+                        <div class="absolute -left-5 sm:-left-8 top-1.5 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white dark:bg-space-950 border-2 border-slate-400 dark:border-slate-600 flex items-center justify-center">
+                            <div class="w-1.5 h-1.5 rounded-full bg-slate-400"></div>
                         </div>
 
-                        <div class="glass-card p-6 sm:p-7 rounded-2xl">
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                        <div class="glass-card p-5 sm:p-6 rounded-2xl">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1.5">
                                 <div>
-                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Desarrollador de Páginas Web & Sistemas</h3>
-                                    <div class="text-sm font-semibold text-slate-600 dark:text-slate-400">Flamago Ibéricos (San Sebastián de los Reyes)</div>
+                                    <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">Desarrollador de Páginas Web & Sistemas</h3>
+                                    <div class="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400">Flamago Ibéricos (San Sebastián de los Reyes)</div>
                                 </div>
                                 <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Jun 2018 - Mar 2019</span>
                             </div>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
-                                Desarrollo, despliegue y mantenimiento de la plataforma web corporativa y e-commerce de Flamago S.L., combinando desarrollo web frontend/backend con administración de sistemas y soporte técnico.
+                            <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-3">
+                                Desarrollo, despliegue y mantenimiento de la plataforma web corporativa y e-commerce de Flamago S.L., con administración de sistemas y soporte técnico.
                             </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">PHP</span>
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">JavaScript</span>
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">MySQL</span>
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Web Hosting & Sysadmin</span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded-md text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">PHP</span>
+                                <span class="px-2 py-0.5 rounded-md text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">JavaScript</span>
+                                <span class="px-2 py-0.5 rounded-md text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">MySQL</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- ITEM 3: NovaQuality Consulting -->
                     <div class="relative group">
-                        <div class="absolute -left-6 sm:-left-10 top-1.5 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-white dark:bg-space-950 border-2 border-slate-400 dark:border-slate-600 flex items-center justify-center">
-                            <div class="w-2 h-2 rounded-full bg-slate-400"></div>
+                        <div class="absolute -left-5 sm:-left-8 top-1.5 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white dark:bg-space-950 border-2 border-slate-400 dark:border-slate-600 flex items-center justify-center">
+                            <div class="w-1.5 h-1.5 rounded-full bg-slate-400"></div>
                         </div>
 
-                        <div class="glass-card p-6 sm:p-7 rounded-2xl">
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                        <div class="glass-card p-5 sm:p-6 rounded-2xl">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1.5">
                                 <div>
-                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Analista de Desarrollo de Aplicaciones</h3>
-                                    <div class="text-sm font-semibold text-slate-600 dark:text-slate-400">NovaQuality Consulting (Alcobendas, Madrid)</div>
+                                    <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">Analista de Desarrollo de Aplicaciones</h3>
+                                    <div class="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400">NovaQuality Consulting (Alcobendas, Madrid)</div>
                                 </div>
                                 <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Mar 2018 - Jun 2018</span>
                             </div>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                            <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-3">
                                 Análisis de requisitos, especificación funcional y apoyo al desarrollo y control de calidad en proyectos de consultoría tecnológica.
                             </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Análisis Funcional</span>
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Quality Assurance</span>
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">BBDD</span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded-md text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Análisis Funcional</span>
+                                <span class="px-2 py-0.5 rounded-md text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Quality Assurance</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- ITEM 4: Content Creator & Streamer -->
                     <div class="relative group">
-                        <div class="absolute -left-6 sm:-left-10 top-1.5 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-white dark:bg-space-950 border-2 border-purple-500 flex items-center justify-center">
-                            <div class="w-2 h-2 rounded-full bg-purple-400"></div>
+                        <div class="absolute -left-5 sm:-left-8 top-1.5 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white dark:bg-space-950 border-2 border-purple-500 flex items-center justify-center">
+                            <div class="w-1.5 h-1.5 rounded-full bg-purple-400"></div>
                         </div>
 
-                        <div class="glass-card p-6 sm:p-7 rounded-2xl border-purple-300 dark:border-purple-500/30">
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                        <div class="glass-card p-5 sm:p-6 rounded-2xl border-purple-300 dark:border-purple-500/30">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1.5">
                                 <div>
-                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                                    <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
                                         <span>Creador de Contenido & Streamer Partner</span>
-                                        <i class="fas fa-check-circle text-purple-600 dark:text-purple-400 text-sm"></i>
+                                        <i class="fas fa-check-circle text-purple-600 dark:text-purple-400 text-xs"></i>
                                     </h3>
-                                    <div class="text-sm font-semibold text-purple-600 dark:text-purple-400">Twitch &bull; Facebook Gaming &bull; YouTube</div>
+                                    <div class="text-xs sm:text-sm font-semibold text-purple-600 dark:text-purple-400">Twitch &bull; Facebook Gaming &bull; YouTube</div>
                                 </div>
-                                <span class="text-xs font-mono text-purple-700 dark:text-purple-300 px-2.5 py-1 rounded-full bg-purple-100 dark:bg-purple-500/10 border border-purple-200 dark:border-purple-500/25 self-start sm:self-auto">
+                                <span class="text-xs font-mono text-purple-700 dark:text-purple-300 px-2 py-0.5 rounded-full bg-purple-100 dark:bg-purple-500/10 border border-purple-200 dark:border-purple-500/25 self-start sm:self-auto">
                                     2012 - 2023 (11 años)
                                 </span>
                             </div>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                            <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-3">
                                 Más de una década creando contenido audiovisual continuo, gestionando comunidades, directos de gran audiencia y colaboraciones comerciales.
                             </p>
-                            <ul class="space-y-1.5 text-sm text-slate-600 dark:text-slate-400 mb-4">
-                                <li class="flex items-center gap-2">
-                                    <i class="fab fa-facebook text-blue-600"></i>
-                                    <span>Streamer Socio y Level Up en <strong>Facebook Gaming</strong> (2018 - 2023).</span>
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <i class="fab fa-twitch text-purple-600"></i>
-                                    <span>Afiliado oficial en <strong>Twitch</strong> (2018 - 2023).</span>
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <i class="fab fa-youtube text-red-600"></i>
-                                    <span>Creador Partner verificado en <strong>YouTube</strong> (2012 - 2023).</span>
-                                </li>
-                            </ul>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-purple-50 text-purple-700 border border-purple-200 dark:bg-purple-950/40 dark:text-purple-300 dark:border-purple-500/20">Edición de Vídeo (Vegas, Camtasia)</span>
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-purple-50 text-purple-700 border border-purple-200 dark:bg-purple-950/40 dark:text-purple-300 dark:border-purple-500/20">Diseño Gráfico (Photoshop)</span>
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-purple-50 text-purple-700 border border-purple-200 dark:bg-purple-950/40 dark:text-purple-300 dark:border-purple-500/20">Comunicación & Liderazgo</span>
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-purple-50 text-purple-700 border border-purple-200 dark:bg-purple-950/40 dark:text-purple-300 dark:border-purple-500/20">Streaming Broadcast (OBS)</span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded-md text-[11px] font-mono bg-purple-50 text-purple-700 border border-purple-200 dark:bg-purple-950/40 dark:text-purple-300 dark:border-purple-500/20">Edición de Vídeo (Vegas, Camtasia)</span>
+                                <span class="px-2 py-0.5 rounded-md text-[11px] font-mono bg-purple-50 text-purple-700 border border-purple-200 dark:bg-purple-950/40 dark:text-purple-300 dark:border-purple-500/20">Diseño Gráfico (Photoshop)</span>
+                                <span class="px-2 py-0.5 rounded-md text-[11px] font-mono bg-purple-50 text-purple-700 border border-purple-200 dark:bg-purple-950/40 dark:text-purple-300 dark:border-purple-500/20">Comunicación & Liderazgo</span>
+                                <span class="px-2 py-0.5 rounded-md text-[11px] font-mono bg-purple-50 text-purple-700 border border-purple-200 dark:bg-purple-950/40 dark:text-purple-300 dark:border-purple-500/20">Streaming Broadcast (OBS)</span>
                             </div>
                         </div>
                     </div>
@@ -646,201 +621,201 @@
         <!-- ============================================== -->
         <!-- SKILLS / TECH STACK SECTION                    -->
         <!-- ============================================== -->
-        <section id="skills" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800/80">
+        <section id="skills" class="py-10 sm:py-14 lg:py-18 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800/80">
             <div class="max-w-7xl mx-auto">
                 
-                <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+                <div class="text-center max-w-3xl mx-auto mb-6 sm:mb-10 space-y-2">
                     <span class="text-xs font-mono tracking-widest text-blue-600 dark:text-cyan-400 uppercase">Tecnologías & Herramientas</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
                         Stack Técnico & Competencias
                     </h2>
                     <div class="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto rounded-full"></div>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base">
+                    <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm">
                         Filtrar por área de especialización técnica:
                     </p>
                 </div>
 
                 <!-- Skill Filter Tabs -->
-                <div class="flex flex-wrap justify-center gap-2 mb-10" id="skill-filter-buttons">
-                    <button onclick="filterSkills('all')" class="skill-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold glass-card text-blue-600 dark:text-cyan-400 border-blue-400 dark:border-cyan-500/40">
+                <div class="flex flex-wrap justify-center gap-1.5 sm:gap-2 mb-6 sm:mb-8" id="skill-filter-buttons">
+                    <button onclick="filterSkills('all')" class="skill-btn active px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm font-semibold glass-card text-blue-600 dark:text-cyan-400 border-blue-400 dark:border-cyan-500/40">
                         Todos
                     </button>
-                    <button onclick="filterSkills('backend')" class="skill-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium glass-card text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400">
+                    <button onclick="filterSkills('backend')" class="skill-btn px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm font-medium glass-card text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400">
                         Backend & Arquitectura
                     </button>
-                    <button onclick="filterSkills('frontend')" class="skill-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium glass-card text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400">
+                    <button onclick="filterSkills('frontend')" class="skill-btn px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm font-medium glass-card text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400">
                         Frontend & UI
                     </button>
-                    <button onclick="filterSkills('database')" class="skill-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium glass-card text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400">
+                    <button onclick="filterSkills('database')" class="skill-btn px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm font-medium glass-card text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400">
                         Bases de Datos
                     </button>
-                    <button onclick="filterSkills('tools')" class="skill-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-medium glass-card text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400">
+                    <button onclick="filterSkills('tools')" class="skill-btn px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm font-medium glass-card text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400">
                         Multimedia & Herramientas
                     </button>
                 </div>
 
                 <!-- Skills Grid -->
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4" id="skills-grid">
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4" id="skills-grid">
                     
                     <!-- Backend: .NET C# -->
-                    <div class="skill-item glass-card p-4 rounded-xl flex flex-col items-center text-center gap-2.5 group" data-category="backend">
-                        <div class="w-12 h-12 rounded-xl bg-blue-600/15 flex items-center justify-center text-blue-600 dark:text-blue-400 text-2xl group-hover:scale-110 transition-transform">
+                    <div class="skill-item glass-card p-3 sm:p-4 rounded-xl flex flex-col items-center text-center gap-2 group" data-category="backend">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-600/15 flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl sm:text-2xl group-hover:scale-110 transition-transform">
                             <i class="fab fa-microsoft"></i>
                         </div>
-                        <span class="font-bold text-sm text-slate-800 dark:text-white">.NET / C#</span>
+                        <span class="font-bold text-xs sm:text-sm text-slate-800 dark:text-white">.NET / C#</span>
                         <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-cyan-300">Producción (+7a)</span>
                     </div>
 
                     <!-- Frontend: Blazor -->
-                    <div class="skill-item glass-card p-4 rounded-xl flex flex-col items-center text-center gap-2.5 group" data-category="backend frontend">
-                        <div class="w-12 h-12 rounded-xl bg-purple-600/15 flex items-center justify-center text-purple-600 dark:text-purple-400 text-2xl group-hover:scale-110 transition-transform">
+                    <div class="skill-item glass-card p-3 sm:p-4 rounded-xl flex flex-col items-center text-center gap-2 group" data-category="backend frontend">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-purple-600/15 flex items-center justify-center text-purple-600 dark:text-purple-400 text-xl sm:text-2xl group-hover:scale-110 transition-transform">
                             <i class="fas fa-layer-group"></i>
                         </div>
-                        <span class="font-bold text-sm text-slate-800 dark:text-white">Blazor Web</span>
+                        <span class="font-bold text-xs sm:text-sm text-slate-800 dark:text-white">Blazor Web</span>
                         <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300">WASM & Server</span>
                     </div>
 
                     <!-- Database: Oracle PLSQL -->
-                    <div class="skill-item glass-card p-4 rounded-xl flex flex-col items-center text-center gap-2.5 group" data-category="database">
-                        <div class="w-12 h-12 rounded-xl bg-red-600/15 flex items-center justify-center text-red-600 text-2xl group-hover:scale-110 transition-transform">
+                    <div class="skill-item glass-card p-3 sm:p-4 rounded-xl flex flex-col items-center text-center gap-2 group" data-category="database">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-red-600/15 flex items-center justify-center text-red-600 text-xl sm:text-2xl group-hover:scale-110 transition-transform">
                             <i class="fas fa-server"></i>
                         </div>
-                        <span class="font-bold text-sm text-slate-800 dark:text-white">Oracle PL/SQL</span>
+                        <span class="font-bold text-xs sm:text-sm text-slate-800 dark:text-white">Oracle PL/SQL</span>
                         <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300">Aeroespacial</span>
                     </div>
 
                     <!-- Database: SQL Server -->
-                    <div class="skill-item glass-card p-4 rounded-xl flex flex-col items-center text-center gap-2.5 group" data-category="database">
-                        <div class="w-12 h-12 rounded-xl bg-blue-600/15 flex items-center justify-center text-blue-600 dark:text-blue-400 text-2xl group-hover:scale-110 transition-transform">
+                    <div class="skill-item glass-card p-3 sm:p-4 rounded-xl flex flex-col items-center text-center gap-2 group" data-category="database">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-600/15 flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl sm:text-2xl group-hover:scale-110 transition-transform">
                             <i class="fas fa-database"></i>
                         </div>
-                        <span class="font-bold text-sm text-slate-800 dark:text-white">SQL Server</span>
+                        <span class="font-bold text-xs sm:text-sm text-slate-800 dark:text-white">SQL Server</span>
                         <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300">Avanzado</span>
                     </div>
 
                     <!-- Backend: Java -->
-                    <div class="skill-item glass-card p-4 rounded-xl flex flex-col items-center text-center gap-2.5 group" data-category="backend">
-                        <div class="w-12 h-12 rounded-xl bg-red-700/15 flex items-center justify-center text-red-600 text-2xl group-hover:scale-110 transition-transform">
+                    <div class="skill-item glass-card p-3 sm:p-4 rounded-xl flex flex-col items-center text-center gap-2 group" data-category="backend">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-red-700/15 flex items-center justify-center text-red-600 text-xl sm:text-2xl group-hover:scale-110 transition-transform">
                             <i class="fab fa-java"></i>
                         </div>
-                        <span class="font-bold text-sm text-slate-800 dark:text-white">Java SE/EE</span>
+                        <span class="font-bold text-xs sm:text-sm text-slate-800 dark:text-white">Java SE/EE</span>
                         <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300">J2EE / OOP</span>
                     </div>
 
                     <!-- Backend: PHP -->
-                    <div class="skill-item glass-card p-4 rounded-xl flex flex-col items-center text-center gap-2.5 group" data-category="backend">
-                        <div class="w-12 h-12 rounded-xl bg-indigo-600/15 flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-2xl group-hover:scale-110 transition-transform">
+                    <div class="skill-item glass-card p-3 sm:p-4 rounded-xl flex flex-col items-center text-center gap-2 group" data-category="backend">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-indigo-600/15 flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-xl sm:text-2xl group-hover:scale-110 transition-transform">
                             <i class="fab fa-php"></i>
                         </div>
-                        <span class="font-bold text-sm text-slate-800 dark:text-white">PHP</span>
+                        <span class="font-bold text-xs sm:text-sm text-slate-800 dark:text-white">PHP</span>
                         <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300">Backend Web</span>
                     </div>
 
                     <!-- Backend: Laravel -->
-                    <div class="skill-item glass-card p-4 rounded-xl flex flex-col items-center text-center gap-2.5 group" data-category="backend">
-                        <div class="w-12 h-12 rounded-xl bg-red-500/15 flex items-center justify-center text-red-500 text-2xl group-hover:scale-110 transition-transform">
+                    <div class="skill-item glass-card p-3 sm:p-4 rounded-xl flex flex-col items-center text-center gap-2 group" data-category="backend">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-red-500/15 flex items-center justify-center text-red-500 text-xl sm:text-2xl group-hover:scale-110 transition-transform">
                             <i class="fab fa-laravel"></i>
                         </div>
-                        <span class="font-bold text-sm text-slate-800 dark:text-white">Laravel</span>
+                        <span class="font-bold text-xs sm:text-sm text-slate-800 dark:text-white">Laravel</span>
                         <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300">MVC Framework</span>
                     </div>
 
                     <!-- Frontend: JavaScript -->
-                    <div class="skill-item glass-card p-4 rounded-xl flex flex-col items-center text-center gap-2.5 group" data-category="frontend">
-                        <div class="w-12 h-12 rounded-xl bg-yellow-500/15 flex items-center justify-center text-yellow-600 dark:text-yellow-400 text-2xl group-hover:scale-110 transition-transform">
+                    <div class="skill-item glass-card p-3 sm:p-4 rounded-xl flex flex-col items-center text-center gap-2 group" data-category="frontend">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-yellow-500/15 flex items-center justify-center text-yellow-600 dark:text-yellow-400 text-xl sm:text-2xl group-hover:scale-110 transition-transform">
                             <i class="fab fa-js"></i>
                         </div>
-                        <span class="font-bold text-sm text-slate-800 dark:text-white">JavaScript ES6+</span>
+                        <span class="font-bold text-xs sm:text-sm text-slate-800 dark:text-white">JavaScript ES6+</span>
                         <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-yellow-100 text-yellow-800 dark:bg-yellow-500/20 dark:text-yellow-300">Modern JS</span>
                     </div>
 
                     <!-- Frontend: HTML5 & CSS3 -->
-                    <div class="skill-item glass-card p-4 rounded-xl flex flex-col items-center text-center gap-2.5 group" data-category="frontend">
-                        <div class="w-12 h-12 rounded-xl bg-orange-600/15 flex items-center justify-center text-orange-600 text-2xl group-hover:scale-110 transition-transform">
+                    <div class="skill-item glass-card p-3 sm:p-4 rounded-xl flex flex-col items-center text-center gap-2 group" data-category="frontend">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-orange-600/15 flex items-center justify-center text-orange-600 text-xl sm:text-2xl group-hover:scale-110 transition-transform">
                             <i class="fab fa-html5"></i>
                         </div>
-                        <span class="font-bold text-sm text-slate-800 dark:text-white">HTML5 & CSS3</span>
-                        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300">Semántica & Flex/Grid</span>
+                        <span class="font-bold text-xs sm:text-sm text-slate-800 dark:text-white">HTML5 & CSS3</span>
+                        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300">Semántica & Grid</span>
                     </div>
 
                     <!-- Frontend: Tailwind & Bootstrap -->
-                    <div class="skill-item glass-card p-4 rounded-xl flex flex-col items-center text-center gap-2.5 group" data-category="frontend">
-                        <div class="w-12 h-12 rounded-xl bg-cyan-600/15 flex items-center justify-center text-cyan-600 dark:text-cyan-400 text-2xl group-hover:scale-110 transition-transform">
+                    <div class="skill-item glass-card p-3 sm:p-4 rounded-xl flex flex-col items-center text-center gap-2 group" data-category="frontend">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-cyan-600/15 flex items-center justify-center text-cyan-600 dark:text-cyan-400 text-xl sm:text-2xl group-hover:scale-110 transition-transform">
                             <i class="fab fa-bootstrap"></i>
                         </div>
-                        <span class="font-bold text-sm text-slate-800 dark:text-white">Tailwind / Bootstrap</span>
+                        <span class="font-bold text-xs sm:text-sm text-slate-800 dark:text-white">Tailwind / Bootstrap</span>
                         <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-300">Responsive UI</span>
                     </div>
 
                     <!-- Database: MySQL -->
-                    <div class="skill-item glass-card p-4 rounded-xl flex flex-col items-center text-center gap-2.5 group" data-category="database">
-                        <div class="w-12 h-12 rounded-xl bg-blue-500/15 flex items-center justify-center text-blue-600 dark:text-blue-400 text-2xl group-hover:scale-110 transition-transform">
+                    <div class="skill-item glass-card p-3 sm:p-4 rounded-xl flex flex-col items-center text-center gap-2 group" data-category="database">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-500/15 flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl sm:text-2xl group-hover:scale-110 transition-transform">
                             <i class="fas fa-database"></i>
                         </div>
-                        <span class="font-bold text-sm text-slate-800 dark:text-white">MySQL</span>
+                        <span class="font-bold text-xs sm:text-sm text-slate-800 dark:text-white">MySQL</span>
                         <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300">Relacional</span>
                     </div>
 
                     <!-- Database: MongoDB -->
-                    <div class="skill-item glass-card p-4 rounded-xl flex flex-col items-center text-center gap-2.5 group" data-category="database">
-                        <div class="w-12 h-12 rounded-xl bg-emerald-500/15 flex items-center justify-center text-emerald-600 dark:text-emerald-400 text-2xl group-hover:scale-110 transition-transform">
+                    <div class="skill-item glass-card p-3 sm:p-4 rounded-xl flex flex-col items-center text-center gap-2 group" data-category="database">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-emerald-500/15 flex items-center justify-center text-emerald-600 dark:text-emerald-400 text-xl sm:text-2xl group-hover:scale-110 transition-transform">
                             <i class="fas fa-leaf"></i>
                         </div>
-                        <span class="font-bold text-sm text-slate-800 dark:text-white">MongoDB</span>
-                        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300">NoSQL Documental</span>
+                        <span class="font-bold text-xs sm:text-sm text-slate-800 dark:text-white">MongoDB</span>
+                        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300">NoSQL</span>
                     </div>
 
                     <!-- Tools: Git & GitHub -->
-                    <div class="skill-item glass-card p-4 rounded-xl flex flex-col items-center text-center gap-2.5 group" data-category="tools">
-                        <div class="w-12 h-12 rounded-xl bg-orange-500/15 flex items-center justify-center text-orange-600 text-2xl group-hover:scale-110 transition-transform">
+                    <div class="skill-item glass-card p-3 sm:p-4 rounded-xl flex flex-col items-center text-center gap-2 group" data-category="tools">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-orange-500/15 flex items-center justify-center text-orange-600 text-xl sm:text-2xl group-hover:scale-110 transition-transform">
                             <i class="fab fa-git-alt"></i>
                         </div>
-                        <span class="font-bold text-sm text-slate-800 dark:text-white">Git & GitHub</span>
-                        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300">Version Control</span>
+                        <span class="font-bold text-xs sm:text-sm text-slate-800 dark:text-white">Git & GitHub</span>
+                        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300">Control Versiones</span>
                     </div>
 
                     <!-- Tools: Visual Studio & IDEs -->
-                    <div class="skill-item glass-card p-4 rounded-xl flex flex-col items-center text-center gap-2.5 group" data-category="tools">
-                        <div class="w-12 h-12 rounded-xl bg-purple-700/15 flex items-center justify-center text-purple-600 dark:text-purple-400 text-2xl group-hover:scale-110 transition-transform">
+                    <div class="skill-item glass-card p-3 sm:p-4 rounded-xl flex flex-col items-center text-center gap-2 group" data-category="tools">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-purple-700/15 flex items-center justify-center text-purple-600 dark:text-purple-400 text-xl sm:text-2xl group-hover:scale-110 transition-transform">
                             <i class="fas fa-laptop-code"></i>
                         </div>
-                        <span class="font-bold text-sm text-slate-800 dark:text-white">Visual Studio</span>
+                        <span class="font-bold text-xs sm:text-sm text-slate-800 dark:text-white">Visual Studio</span>
                         <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300">Enterprise Dev</span>
                     </div>
 
                     <!-- Multimedia: Video Editing -->
-                    <div class="skill-item glass-card p-4 rounded-xl flex flex-col items-center text-center gap-2.5 group" data-category="tools">
-                        <div class="w-12 h-12 rounded-xl bg-rose-600/15 flex items-center justify-center text-rose-600 dark:text-rose-400 text-2xl group-hover:scale-110 transition-transform">
+                    <div class="skill-item glass-card p-3 sm:p-4 rounded-xl flex flex-col items-center text-center gap-2 group" data-category="tools">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-rose-600/15 flex items-center justify-center text-rose-600 dark:text-rose-400 text-xl sm:text-2xl group-hover:scale-110 transition-transform">
                             <i class="fas fa-film"></i>
                         </div>
-                        <span class="font-bold text-sm text-slate-800 dark:text-white">Edición de Vídeo</span>
+                        <span class="font-bold text-xs sm:text-sm text-slate-800 dark:text-white">Edición de Vídeo</span>
                         <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-rose-100 text-rose-700 dark:bg-rose-500/20 dark:text-rose-300">Vegas / Camtasia</span>
                     </div>
 
                     <!-- Multimedia: Photoshop -->
-                    <div class="skill-item glass-card p-4 rounded-xl flex flex-col items-center text-center gap-2.5 group" data-category="tools">
-                        <div class="w-12 h-12 rounded-xl bg-sky-600/15 flex items-center justify-center text-sky-600 dark:text-sky-400 text-2xl group-hover:scale-110 transition-transform">
+                    <div class="skill-item glass-card p-3 sm:p-4 rounded-xl flex flex-col items-center text-center gap-2 group" data-category="tools">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-sky-600/15 flex items-center justify-center text-sky-600 dark:text-sky-400 text-xl sm:text-2xl group-hover:scale-110 transition-transform">
                             <i class="fas fa-image"></i>
                         </div>
-                        <span class="font-bold text-sm text-slate-800 dark:text-white">Photoshop</span>
+                        <span class="font-bold text-xs sm:text-sm text-slate-800 dark:text-white">Photoshop</span>
                         <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-sky-100 text-sky-700 dark:bg-sky-500/20 dark:text-sky-300">Composición & UI</span>
                     </div>
 
                     <!-- Tools: Streaming Broadcast (OBS) -->
-                    <div class="skill-item glass-card p-4 rounded-xl flex flex-col items-center text-center gap-2.5 group" data-category="tools">
-                        <div class="w-12 h-12 rounded-xl bg-violet-600/15 flex items-center justify-center text-violet-600 dark:text-violet-400 text-2xl group-hover:scale-110 transition-transform">
+                    <div class="skill-item glass-card p-3 sm:p-4 rounded-xl flex flex-col items-center text-center gap-2 group" data-category="tools">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-violet-600/15 flex items-center justify-center text-violet-600 dark:text-violet-400 text-xl sm:text-2xl group-hover:scale-110 transition-transform">
                             <i class="fas fa-headset"></i>
                         </div>
-                        <span class="font-bold text-sm text-slate-800 dark:text-white">OBS & Broadcast</span>
+                        <span class="font-bold text-xs sm:text-sm text-slate-800 dark:text-white">OBS & Broadcast</span>
                         <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-violet-100 text-violet-700 dark:bg-violet-500/20 dark:text-violet-300">Live Streaming</span>
                     </div>
 
                     <!-- Backend: Functional JS & REST -->
-                    <div class="skill-item glass-card p-4 rounded-xl flex flex-col items-center text-center gap-2.5 group" data-category="backend frontend">
-                        <div class="w-12 h-12 rounded-xl bg-cyan-600/15 flex items-center justify-center text-blue-600 dark:text-cyan-400 text-2xl group-hover:scale-110 transition-transform">
+                    <div class="skill-item glass-card p-3 sm:p-4 rounded-xl flex flex-col items-center text-center gap-2 group" data-category="backend frontend">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-cyan-600/15 flex items-center justify-center text-blue-600 dark:text-cyan-400 text-xl sm:text-2xl group-hover:scale-110 transition-transform">
                             <i class="fas fa-network-wired"></i>
                         </div>
-                        <span class="font-bold text-sm text-slate-800 dark:text-white">APIs & Arquitectura</span>
+                        <span class="font-bold text-xs sm:text-sm text-slate-800 dark:text-white">APIs & Arquitectura</span>
                         <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-300">REST & Clean Code</span>
                     </div>
 
@@ -852,49 +827,49 @@
         <!-- ============================================== -->
         <!-- PROJECTS SHOWCASE SECTION                      -->
         <!-- ============================================== -->
-        <section id="projects" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800/80">
+        <section id="projects" class="py-10 sm:py-14 lg:py-18 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800/80">
             <div class="max-w-7xl mx-auto">
                 
-                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-2">
                     <span class="text-xs font-mono tracking-widest text-blue-600 dark:text-cyan-400 uppercase">Casos & Desarrollos</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
                         Proyectos Destacados
                     </h2>
                     <div class="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto rounded-full"></div>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base">
+                    <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm">
                         Muestra de arquitecturas empresariales, desarrollos full-stack y soluciones multimedia.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     
                     <!-- Project 1: Aerospace IT Data Hub -->
                     <div class="glass-card rounded-2xl overflow-hidden flex flex-col group">
-                        <div class="h-48 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-900 dark:from-slate-900 dark:via-blue-950 dark:to-space-950 p-6 flex flex-col justify-between border-b border-slate-200 dark:border-slate-800 relative overflow-hidden">
-                            <div class="absolute -right-8 -bottom-8 text-white/10 dark:text-slate-800/40 text-9xl">
+                        <div class="h-44 sm:h-48 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-900 dark:from-slate-900 dark:via-blue-950 dark:to-space-950 p-5 sm:p-6 flex flex-col justify-between border-b border-slate-200 dark:border-slate-800 relative overflow-hidden">
+                            <div class="absolute -right-6 -bottom-6 text-white/10 dark:text-slate-800/40 text-8xl">
                                 <i class="fas fa-satellite"></i>
                             </div>
                             <div class="flex items-center justify-between z-10">
-                                <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-blue-500/30 text-cyan-200 border border-blue-400/40">Misión Crítica</span>
+                                <span class="px-2.5 py-0.5 rounded-md text-[10px] sm:text-[11px] font-mono bg-blue-500/30 text-cyan-200 border border-blue-400/40">Misión Crítica</span>
                                 <i class="fas fa-shield-alt text-cyan-300"></i>
                             </div>
                             <div class="z-10">
-                                <h3 class="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">Aerospace Enterprise Hub</h3>
-                                <p class="text-xs font-mono text-cyan-200/80 mt-1">.NET C# &bull; Oracle PL/SQL &bull; IT</p>
+                                <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">Aerospace Enterprise Hub</h3>
+                                <p class="text-xs font-mono text-cyan-200/80 mt-0.5">.NET C# &bull; Oracle PL/SQL &bull; IT</p>
                             </div>
                         </div>
 
-                        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                                Arquitectura interna de gestión y centralización de datos diseñada para procesos de alto rigor en sector aeroespacial. Garantiza sincronización en tiempo real y consistencia de datos de misión crítica.
+                        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-3 sm:space-y-4">
+                            <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed">
+                                Arquitectura interna de gestión y centralización de datos diseñada para procesos de alto rigor en sector aeroespacial. Garantiza sincronización y consistencia de datos de misión crítica.
                             </p>
                             <div>
-                                <div class="flex flex-wrap gap-1.5 mb-4">
-                                    <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">.NET Core</span>
-                                    <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Oracle</span>
-                                    <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Visual Studio</span>
+                                <div class="flex flex-wrap gap-1.5 mb-3">
+                                    <span class="px-2 py-0.5 rounded text-[10px] sm:text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">.NET Core</span>
+                                    <span class="px-2 py-0.5 rounded text-[10px] sm:text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Oracle</span>
+                                    <span class="px-2 py-0.5 rounded text-[10px] sm:text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Visual Studio</span>
                                 </div>
-                                <div class="pt-3 border-t border-slate-200 dark:border-slate-800/80 flex items-center justify-between text-xs font-mono text-blue-600 dark:text-cyan-400">
+                                <div class="pt-2.5 border-t border-slate-200 dark:border-slate-800/80 flex items-center justify-between text-xs font-mono text-blue-600 dark:text-cyan-400">
                                     <span>Airbus Crisa Ecosystem</span>
                                     <i class="fas fa-lock text-slate-400" title="Código privado corporativo"></i>
                                 </div>
@@ -904,32 +879,31 @@
 
                     <!-- Project 2: Modern Blazor Cloud Platform -->
                     <div class="glass-card rounded-2xl overflow-hidden flex flex-col group">
-                        <div class="h-48 bg-gradient-to-br from-slate-800 via-purple-900 to-slate-900 dark:from-space-900 dark:via-purple-950 dark:to-space-950 p-6 flex flex-col justify-between border-b border-slate-200 dark:border-slate-800 relative overflow-hidden">
-                            <div class="absolute -right-8 -bottom-8 text-white/10 dark:text-slate-800/40 text-9xl">
+                        <div class="h-44 sm:h-48 bg-gradient-to-br from-slate-800 via-purple-900 to-slate-900 dark:from-space-900 dark:via-purple-950 dark:to-space-950 p-5 sm:p-6 flex flex-col justify-between border-b border-slate-200 dark:border-slate-800 relative overflow-hidden">
+                            <div class="absolute -right-6 -bottom-6 text-white/10 dark:text-slate-800/40 text-8xl">
                                 <i class="fas fa-cubes"></i>
                             </div>
                             <div class="flex items-center justify-between z-10">
-                                <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-purple-500/30 text-purple-200 border border-purple-400/40">Single Page App</span>
+                                <span class="px-2.5 py-0.5 rounded-md text-[10px] sm:text-[11px] font-mono bg-purple-500/30 text-purple-200 border border-purple-400/40">Single Page App</span>
                                 <i class="fas fa-bolt text-purple-300"></i>
                             </div>
                             <div class="z-10">
-                                <h3 class="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">Blazor Management Suite</h3>
-                                <p class="text-xs font-mono text-purple-200/80 mt-1">C# .NET &bull; Blazor &bull; REST APIs</p>
+                                <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-purple-300 transition-colors">Blazor Management Suite</h3>
+                                <p class="text-xs font-mono text-purple-200/80 mt-0.5">C# .NET &bull; Blazor &bull; REST APIs</p>
                             </div>
                         </div>
 
-                        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                                Plataforma SPA moderna desarrollada con Blazor para visualización de métricas, autenticación basada en roles y gestión de flujos de trabajo operativos con sincronización bidireccional.
+                        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-3 sm:space-y-4">
+                            <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed">
+                                Plataforma SPA moderna desarrollada con Blazor para visualización de métricas, autenticación basada en roles y gestión de flujos de trabajo operativos.
                             </p>
                             <div>
-                                <div class="flex flex-wrap gap-1.5 mb-4">
-                                    <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Blazor Web</span>
-                                    <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">C#</span>
-                                    <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">SQL Server</span>
-                                    <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Tailwind</span>
+                                <div class="flex flex-wrap gap-1.5 mb-3">
+                                    <span class="px-2 py-0.5 rounded text-[10px] sm:text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Blazor Web</span>
+                                    <span class="px-2 py-0.5 rounded text-[10px] sm:text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">C#</span>
+                                    <span class="px-2 py-0.5 rounded text-[10px] sm:text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">SQL Server</span>
                                 </div>
-                                <div class="pt-3 border-t border-slate-200 dark:border-slate-800/80 flex items-center justify-between text-xs font-mono text-purple-600 dark:text-purple-400">
+                                <div class="pt-2.5 border-t border-slate-200 dark:border-slate-800/80 flex items-center justify-between text-xs font-mono text-purple-600 dark:text-purple-400">
                                     <a href="https://github.com/damijumi" target="_blank" class="hover:underline flex items-center gap-1">
                                         <span>Explorar en GitHub</span>
                                         <i class="fas fa-arrow-right text-[10px]"></i>
@@ -942,31 +916,31 @@
 
                     <!-- Project 3: Stream & Media Automation Engine -->
                     <div class="glass-card rounded-2xl overflow-hidden flex flex-col group">
-                        <div class="h-48 bg-gradient-to-br from-slate-800 via-rose-900 to-slate-900 dark:from-space-900 dark:via-rose-950 dark:to-space-950 p-6 flex flex-col justify-between border-b border-slate-200 dark:border-slate-800 relative overflow-hidden">
-                            <div class="absolute -right-8 -bottom-8 text-white/10 dark:text-slate-800/40 text-9xl">
+                        <div class="h-44 sm:h-48 bg-gradient-to-br from-slate-800 via-rose-900 to-slate-900 dark:from-space-900 dark:via-rose-950 dark:to-space-950 p-5 sm:p-6 flex flex-col justify-between border-b border-slate-200 dark:border-slate-800 relative overflow-hidden">
+                            <div class="absolute -right-6 -bottom-6 text-white/10 dark:text-slate-800/40 text-8xl">
                                 <i class="fas fa-broadcast-tower"></i>
                             </div>
                             <div class="flex items-center justify-between z-10">
-                                <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-rose-500/30 text-rose-200 border border-rose-400/40">Multimedia & Bot</span>
+                                <span class="px-2.5 py-0.5 rounded-md text-[10px] sm:text-[11px] font-mono bg-rose-500/30 text-rose-200 border border-rose-400/40">Multimedia & Bot</span>
                                 <i class="fas fa-video text-rose-300"></i>
                             </div>
                             <div class="z-10">
-                                <h3 class="text-xl font-bold text-white group-hover:text-rose-300 transition-colors">StreamBroadcast Engine</h3>
-                                <p class="text-xs font-mono text-rose-200/80 mt-1">Twitch / YouTube APIs &bull; OBS &bull; JS</p>
+                                <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-rose-300 transition-colors">StreamBroadcast Engine</h3>
+                                <p class="text-xs font-mono text-rose-200/80 mt-0.5">Twitch / YouTube APIs &bull; OBS &bull; JS</p>
                             </div>
                         </div>
 
-                        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                                Sistema de automatización de directos e interacción con audiencias que integra webhooks y APIs de Twitch/YouTube con escenas de OBS y generación dinámica de contenido multimedia.
+                        <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-3 sm:space-y-4">
+                            <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed">
+                                Sistema de automatización de directos e interacción con audiencias que integra webhooks y APIs de streaming con escenas de OBS y generación multimedia dinámica.
                             </p>
                             <div>
-                                <div class="flex flex-wrap gap-1.5 mb-4">
-                                    <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">JavaScript</span>
-                                    <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Webhooks</span>
-                                    <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">OBS WebSocket</span>
+                                <div class="flex flex-wrap gap-1.5 mb-3">
+                                    <span class="px-2 py-0.5 rounded text-[10px] sm:text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">JavaScript</span>
+                                    <span class="px-2 py-0.5 rounded text-[10px] sm:text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Webhooks</span>
+                                    <span class="px-2 py-0.5 rounded text-[10px] sm:text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">OBS WebSocket</span>
                                 </div>
-                                <div class="pt-3 border-t border-slate-200 dark:border-slate-800/80 flex items-center justify-between text-xs font-mono text-rose-600 dark:text-rose-400">
+                                <div class="pt-2.5 border-t border-slate-200 dark:border-slate-800/80 flex items-center justify-between text-xs font-mono text-rose-600 dark:text-rose-400">
                                     <a href="https://github.com/damijumi" target="_blank" class="hover:underline flex items-center gap-1">
                                         <span>Ver Repositorio</span>
                                         <i class="fas fa-arrow-right text-[10px]"></i>
@@ -985,44 +959,44 @@
         <!-- ============================================== -->
         <!-- EDUCATION & QUALIFICATIONS                     -->
         <!-- ============================================== -->
-        <section id="education" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800/80">
+        <section id="education" class="py-10 sm:py-14 lg:py-18 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800/80">
             <div class="max-w-4xl mx-auto">
                 
-                <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+                <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10 space-y-2">
                     <span class="text-xs font-mono tracking-widest text-blue-600 dark:text-cyan-400 uppercase">Formación Académica</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
                         Educación Oficial
                     </h2>
                     <div class="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto rounded-full"></div>
                 </div>
 
-                <div class="glass-card p-8 rounded-2xl flex flex-col md:flex-row items-start gap-6 border-indigo-200 dark:border-indigo-500/30">
-                    <div class="w-14 h-14 rounded-2xl bg-indigo-600/15 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-3xl shrink-0">
+                <div class="glass-card p-6 sm:p-8 rounded-2xl flex flex-col md:flex-row items-start gap-4 sm:gap-6 border-indigo-200 dark:border-indigo-500/30">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-indigo-600/15 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-2xl sm:text-3xl shrink-0">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
 
-                    <div class="flex-1 space-y-3">
+                    <div class="flex-1 space-y-2.5">
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">
+                            <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
                                 Técnico Superior en Desarrollo de Aplicaciones Web (DAW)
                             </h3>
-                            <span class="text-xs font-mono px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-500/25 self-start sm:self-auto">
+                            <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-500/25 self-start sm:self-auto">
                                 2015 - 2018
                             </span>
                         </div>
 
-                        <div class="text-sm font-semibold text-indigo-600 dark:text-indigo-400">
+                        <div class="text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400">
                             IES Virgen de la Paz (Alcobendas, Madrid)
                         </div>
 
-                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                             Formación oficial de grado superior orientada a arquitectura software cliente/servidor, diseño relacional de bases de datos, despliegue de aplicaciones web seguras, patrones de diseño orientados a objetos y metodologías de desarrollo.
                         </p>
 
-                        <div class="flex flex-wrap gap-2 pt-2">
-                            <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Desarrollo Web Cliente/Servidor</span>
-                            <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Bases de Datos Relacionales</span>
-                            <span class="px-2.5 py-1 rounded-lg text-xs font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Despliegue de Apps Web</span>
+                        <div class="flex flex-wrap gap-1.5 pt-1">
+                            <span class="px-2 py-0.5 rounded-md text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Desarrollo Web Cliente/Servidor</span>
+                            <span class="px-2 py-0.5 rounded-md text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Bases de Datos Relacionales</span>
+                            <span class="px-2 py-0.5 rounded-md text-[11px] font-mono bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Despliegue de Apps Web</span>
                         </div>
                     </div>
                 </div>
@@ -1033,84 +1007,84 @@
         <!-- ============================================== -->
         <!-- CONTACT SECTION: Direct & Functional Form      -->
         <!-- ============================================== -->
-        <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800/80 relative overflow-hidden">
+        <section id="contact" class="py-10 sm:py-14 lg:py-18 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800/80 relative overflow-hidden">
             <div class="max-w-6xl mx-auto">
                 
-                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-2">
                     <span class="text-xs font-mono tracking-widest text-blue-600 dark:text-cyan-400 uppercase">Contacto Directo</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
                         ¿Interesado en colaborar o en mi perfil?
                     </h2>
                     <div class="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto rounded-full"></div>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base">
+                    <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm">
                         Estoy disponible para conversar sobre oportunidades técnicas, proyectos desafiantes o intercambio de ideas.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
                     
                     <!-- Direct Info Cards (5 Cols) -->
-                    <div class="lg:col-span-5 space-y-4">
+                    <div class="lg:col-span-5 space-y-3">
                         
                         <!-- Email Card -->
-                        <div class="glass-card p-6 rounded-2xl flex items-center justify-between group">
-                            <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 rounded-xl bg-cyan-500/15 text-blue-600 dark:text-cyan-400 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">
+                        <div class="glass-card p-4 sm:p-5 rounded-2xl flex items-center justify-between group">
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-cyan-500/15 text-blue-600 dark:text-cyan-400 flex items-center justify-center text-lg shrink-0 group-hover:scale-110 transition-transform">
                                     <i class="fas fa-envelope"></i>
                                 </div>
                                 <div>
-                                    <div class="text-xs font-mono text-slate-500 dark:text-slate-400">Correo Electrónico</div>
-                                    <a href="mailto:damijumi@gmail.com" class="text-base font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-cyan-400 transition-colors">
+                                    <div class="text-[11px] font-mono text-slate-500 dark:text-slate-400">Correo Electrónico</div>
+                                    <a href="mailto:damijumi@gmail.com" class="text-sm sm:text-base font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-cyan-400 transition-colors">
                                         damijumi@gmail.com
                                     </a>
                                 </div>
                             </div>
-                            <button onclick="copyEmail()" class="p-2.5 rounded-lg glass-card text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-cyan-400 transition-colors" title="Copiar email al portapapeles">
+                            <button onclick="copyEmail()" class="p-2 rounded-lg glass-card text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-cyan-400 transition-colors" title="Copiar email al portapapeles">
                                 <i class="far fa-copy text-sm"></i>
                             </button>
                         </div>
 
                         <!-- Phone Card -->
-                        <div class="glass-card p-6 rounded-2xl flex items-center gap-4 group">
-                            <div class="w-12 h-12 rounded-xl bg-blue-500/15 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">
+                        <div class="glass-card p-4 sm:p-5 rounded-2xl flex items-center gap-3.5 group">
+                            <div class="w-10 h-10 rounded-xl bg-blue-500/15 text-blue-600 dark:text-blue-400 flex items-center justify-center text-lg shrink-0 group-hover:scale-110 transition-transform">
                                 <i class="fas fa-phone-alt"></i>
                             </div>
                             <div>
-                                <div class="text-xs font-mono text-slate-500 dark:text-slate-400">Teléfono / WhatsApp</div>
-                                <a href="tel:+34689310644" class="text-base font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-cyan-400 transition-colors">
+                                <div class="text-[11px] font-mono text-slate-500 dark:text-slate-400">Teléfono / WhatsApp</div>
+                                <a href="tel:+34689310644" class="text-sm sm:text-base font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-cyan-400 transition-colors">
                                     +34 689 31 06 44
                                 </a>
                             </div>
                         </div>
 
                         <!-- Location Card -->
-                        <div class="glass-card p-6 rounded-2xl flex items-center gap-4 group">
-                            <div class="w-12 h-12 rounded-xl bg-purple-500/15 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">
+                        <div class="glass-card p-4 sm:p-5 rounded-2xl flex items-center gap-3.5 group">
+                            <div class="w-10 h-10 rounded-xl bg-purple-500/15 text-purple-600 dark:text-purple-400 flex items-center justify-center text-lg shrink-0 group-hover:scale-110 transition-transform">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
-                                <div class="text-xs font-mono text-slate-500 dark:text-slate-400">Ubicación</div>
-                                <div class="text-base font-bold text-slate-900 dark:text-white">
+                                <div class="text-[11px] font-mono text-slate-500 dark:text-slate-400">Ubicación</div>
+                                <div class="text-sm sm:text-base font-bold text-slate-900 dark:text-white">
                                     San Sebastián de los Reyes, Madrid
                                 </div>
                             </div>
                         </div>
 
                         <!-- Social GitHub Card -->
-                        <div class="glass-card p-6 rounded-2xl flex items-center justify-between group">
-                            <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 rounded-xl bg-slate-800 text-white dark:text-slate-300 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">
+                        <div class="glass-card p-4 sm:p-5 rounded-2xl flex items-center justify-between group">
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-slate-800 text-white dark:text-slate-300 flex items-center justify-center text-lg shrink-0 group-hover:scale-110 transition-transform">
                                     <i class="fab fa-github"></i>
                                 </div>
                                 <div>
-                                    <div class="text-xs font-mono text-slate-500 dark:text-slate-400">GitHub Profile</div>
-                                    <a href="https://github.com/damijumi" target="_blank" rel="noopener noreferrer" class="text-base font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-cyan-400 transition-colors">
+                                    <div class="text-[11px] font-mono text-slate-500 dark:text-slate-400">GitHub Profile</div>
+                                    <a href="https://github.com/damijumi" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-cyan-400 transition-colors">
                                         github.com/damijumi
                                     </a>
                                 </div>
                             </div>
-                            <a href="https://github.com/damijumi" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-lg glass-card text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-cyan-400 transition-colors">
-                                <i class="fas fa-external-link-alt text-sm"></i>
+                            <a href="https://github.com/damijumi" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg glass-card text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-cyan-400 transition-colors">
+                                <i class="fas fa-external-link-alt text-xs"></i>
                             </a>
                         </div>
 
@@ -1118,42 +1092,42 @@
 
                     <!-- Contact Form (7 Cols) -->
                     <div class="lg:col-span-7">
-                        <div class="glass-card p-8 rounded-2xl border-blue-200 dark:border-cyan-500/20">
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Enviar Mensaje Directo</h3>
-                            <p class="text-sm text-slate-600 dark:text-slate-400 mb-6">
+                        <div class="glass-card p-5 sm:p-7 rounded-2xl border-blue-200 dark:border-cyan-500/20">
+                            <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-1.5">Enviar Mensaje Directo</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mb-4 sm:mb-5">
                                 Rellena los datos para contactarme directamente por correo electrónico:
                             </p>
 
-                            <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-3 sm:space-y-4">
                                 <div>
-                                    <label class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1.5" for="name">
+                                    <label class="block text-[11px] font-mono uppercase text-slate-500 dark:text-slate-400 mb-1" for="name">
                                         Nombre / Empresa *
                                     </label>
-                                    <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl bg-white dark:bg-space-900/80 border border-slate-300 dark:border-slate-700/80 text-slate-900 dark:text-white focus:outline-none focus:border-blue-600 dark:focus:border-cyan-400 transition-colors text-sm" placeholder="Ej. Ana Martínez / Tech Recruiters">
+                                    <input type="text" id="name" required class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-space-900/80 border border-slate-300 dark:border-slate-700/80 text-slate-900 dark:text-white focus:outline-none focus:border-blue-600 dark:focus:border-cyan-400 transition-colors text-xs sm:text-sm" placeholder="Ej. Ana Martínez / Tech Recruiters">
                                 </div>
 
                                 <div>
-                                    <label class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1.5" for="subject">
+                                    <label class="block text-[11px] font-mono uppercase text-slate-500 dark:text-slate-400 mb-1" for="subject">
                                         Asunto *
                                     </label>
-                                    <input type="text" id="subject" required class="w-full px-4 py-3 rounded-xl bg-white dark:bg-space-900/80 border border-slate-300 dark:border-slate-700/80 text-slate-900 dark:text-white focus:outline-none focus:border-blue-600 dark:focus:border-cyan-400 transition-colors text-sm" placeholder="Oportunidad laboral / Propuesta de colaboración">
+                                    <input type="text" id="subject" required class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-space-900/80 border border-slate-300 dark:border-slate-700/80 text-slate-900 dark:text-white focus:outline-none focus:border-blue-600 dark:focus:border-cyan-400 transition-colors text-xs sm:text-sm" placeholder="Oportunidad laboral / Propuesta de colaboración">
                                 </div>
 
                                 <div>
-                                    <label class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1.5" for="message">
+                                    <label class="block text-[11px] font-mono uppercase text-slate-500 dark:text-slate-400 mb-1" for="message">
                                         Mensaje *
                                     </label>
-                                    <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-xl bg-white dark:bg-space-900/80 border border-slate-300 dark:border-slate-700/80 text-slate-900 dark:text-white focus:outline-none focus:border-blue-600 dark:focus:border-cyan-400 transition-colors text-sm resize-none" placeholder="Hola Sergio, me gustaría hablar contigo acerca de..."></textarea>
+                                    <textarea id="message" rows="3" required class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-space-900/80 border border-slate-300 dark:border-slate-700/80 text-slate-900 dark:text-white focus:outline-none focus:border-blue-600 dark:focus:border-cyan-400 transition-colors text-xs sm:text-sm resize-none" placeholder="Hola Sergio, me gustaría hablar contigo acerca de..."></textarea>
                                 </div>
 
-                                <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-600 via-cyan-500 to-indigo-600 hover:from-blue-500 hover:to-cyan-400 text-white font-semibold text-sm shadow-xl shadow-cyan-500/20 hover:shadow-cyan-500/35 transition-all duration-300 flex items-center justify-center gap-2">
+                                <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-blue-600 via-cyan-500 to-indigo-600 hover:from-blue-500 hover:to-cyan-400 text-white font-semibold text-xs sm:text-sm shadow-md shadow-cyan-500/20 hover:shadow-cyan-500/35 transition-all duration-300 flex items-center justify-center gap-2">
                                     <i class="fas fa-paper-plane text-xs"></i>
                                     <span>Abrir Email con este Mensaje</span>
                                 </button>
                             </form>
 
-                            <div id="form-feedback" class="hidden mt-4 p-4 rounded-xl bg-blue-50 border border-blue-200 text-blue-700 dark:bg-cyan-500/10 dark:border-cyan-500/30 dark:text-cyan-400 text-sm flex items-center gap-3">
-                                <i class="fas fa-check-circle text-lg"></i>
+                            <div id="form-feedback" class="hidden mt-3 p-3.5 rounded-xl bg-blue-50 border border-blue-200 text-blue-700 dark:bg-cyan-500/10 dark:border-cyan-500/30 dark:text-cyan-400 text-xs sm:text-sm flex items-center gap-2.5">
+                                <i class="fas fa-check-circle text-base shrink-0"></i>
                                 <span>¡Listo! Se ha preparado tu cliente de correo con el mensaje. También puedes escribir directamente a <strong>damijumi@gmail.com</strong>.</span>
                             </div>
                         </div>
@@ -1167,13 +1141,13 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-10 border-t border-slate-200 dark:border-slate-800/80 bg-slate-100 dark:bg-space-950 relative z-10 text-xs font-mono text-slate-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-cyan-500"></span>
+    <footer class="py-6 sm:py-8 border-t border-slate-200 dark:border-slate-800/80 bg-slate-100 dark:bg-space-950 relative z-10 text-xs font-mono text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="flex items-center gap-2 text-center sm:text-left">
+                <span class="w-2 h-2 rounded-full bg-cyan-500 shrink-0"></span>
                 <span>&copy; 2026 Sergio Damián García Martín (damijumi). Todos los derechos reservados.</span>
             </div>
-            <div class="flex items-center gap-6">
+            <div class="flex items-center gap-4 sm:gap-6">
                 <a href="#about" class="hover:text-blue-600 dark:hover:text-cyan-400 transition-colors">Inicio</a>
                 <a href="#experience" class="hover:text-blue-600 dark:hover:text-cyan-400 transition-colors">Experiencia</a>
                 <a href="#skills" class="hover:text-blue-600 dark:hover:text-cyan-400 transition-colors">Stack</a>
@@ -1183,9 +1157,9 @@
     </footer>
 
     <!-- Toast Notification for Clipboard Copy -->
-    <div id="toast" class="fixed bottom-6 right-6 z-[200] transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
-        <div class="glass-card px-5 py-3 rounded-xl border-blue-400 dark:border-cyan-400/40 shadow-2xl flex items-center gap-3 text-blue-600 dark:text-cyan-400 font-mono text-sm">
-            <i class="fas fa-check-circle text-base"></i>
+    <div id="toast" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[200] transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="glass-card px-4 py-2.5 rounded-xl border-blue-400 dark:border-cyan-400/40 shadow-xl flex items-center gap-2.5 text-blue-600 dark:text-cyan-400 font-mono text-xs sm:text-sm">
+            <i class="fas fa-check-circle text-sm"></i>
             <span id="toast-message">¡Email copiado al portapapeles!</span>
         </div>
     </div>
@@ -1220,12 +1194,12 @@
             let speed = isDeleting ? 30 : 60;
 
             if (!isDeleting && charIdx === currentRole.length) {
-                speed = 2000; // Pause at full word
+                speed = 2000;
                 isDeleting = true;
             } else if (isDeleting && charIdx === 0) {
                 isDeleting = false;
                 roleIdx = (roleIdx + 1) % roles.length;
-                speed = 400; // Pause before next word
+                speed = 400;
             }
 
             setTimeout(typeLoop, speed);
@@ -1247,12 +1221,12 @@
             if (isDark) {
                 html.classList.add("dark");
                 if (themeIcon) themeIcon.className = "fas fa-moon text-sm text-cyan-400";
-                if (mobileThemeIcon) mobileThemeIcon.className = "fas fa-moon text-sm text-cyan-400";
+                if (mobileThemeIcon) mobileThemeIcon.className = "fas fa-moon text-xs text-cyan-400";
                 localStorage.setItem("theme", "dark");
             } else {
                 html.classList.remove("dark");
                 if (themeIcon) themeIcon.className = "fas fa-sun text-sm text-amber-500";
-                if (mobileThemeIcon) mobileThemeIcon.className = "fas fa-sun text-sm text-amber-500";
+                if (mobileThemeIcon) mobileThemeIcon.className = "fas fa-sun text-xs text-amber-500";
                 localStorage.setItem("theme", "light");
             }
         }
@@ -1308,7 +1282,7 @@
         function copyEmail() {
             const email = "damijumi@gmail.com";
             navigator.clipboard.writeText(email).then(() => {
-                showToast("¡Email copiado al portapapeles! (" + email + ")");
+                showToast("¡Email copiado! (" + email + ")");
             }).catch(() => {
                 window.prompt("Copiar correo:", email);
             });
